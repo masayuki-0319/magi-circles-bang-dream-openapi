@@ -26,6 +26,8 @@ servers:
 tags:
 - name: members
   description: Band Members
+- name: cards
+  description: Game Cards
 
 paths:
   "/":
@@ -198,6 +200,174 @@ paths:
                     type: string
                     example: She is highly active and always positive girl. Since she entered high school, she's been searching for something sparkling that could make her heart flutter. Along the way, she encountered a girl with a bright red star-shaped guitar, and since then, it's become her dream to form a girl band. She has a younger sister in her family of 4, but it's not exactly clear who acts like the elder
                     nullable: true
+  "/cardids/":
+    get:
+      summary: Get All card id
+      description: Get All card id
+      deprecated: false
+      tags: ["cards"]
+      requestBody:
+        content:
+          application/json: {}
+      responses:
+        200:
+          description: Success
+          headers:
+            cache-control:
+              $ref: '#/components/headers/cache-control'
+            content-language:
+              $ref: '#/components/headers/content-language'
+            content-type:
+              $ref: '#/components/headers/content-type'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: integer
+                example: [1985,1984,1983,1982,1981]
+  "/cards/{cardsId}/":
+    get:
+      summary: Get specified card
+      description: Get specified card
+      deprecated: false
+      tags: ["cards"]
+      parameters:
+        - name: cardId
+          in: path
+          description: Card ID
+          required: true
+          schema: { type: string }
+          example: 1982
+      requestBody:
+        content:
+          application/json: {}
+      responses:
+        200:
+          description: Success
+          headers:
+            cache-control:
+              $ref: '#/components/headers/cache-control'
+            content-language:
+              $ref: '#/components/headers/content-language'
+            content-type:
+              $ref: '#/components/headers/content-type'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1982
+                  member:
+                    type: integer
+                    example: 12
+                  i_rarity:
+                    type: integer
+                    example: 4
+                  i_attribute:
+                    type: string
+                    enum: ["Happy", "Cool", "Powerful", "Cute"]
+                    example: "Happy"
+                  name:
+                    type: string
+                    example: null
+                    nullable: true
+                  japanese_name:
+                    type: string
+                    example: "さくらフォトフレーム"
+                    nullable: true
+                  release_date:
+                    type: string
+                    example: "2022-04-01"
+                  is_promo:
+                    type: boolean
+                    example: false
+                  is_original:
+                    type: boolean
+                    example: false
+                  image:
+                    type: string
+                    format: uri
+                    example: "https://i.bandori.party/u/c/1982Moca-Aoba-Happy-U9jwT4.png"
+                  image_trained:
+                    type: string
+                    format: uri
+                    example: "https://i.bandori.party/u/c/a/1982Moca-Aoba-Happy-5U2t3z.png"
+                  art:
+                    type: string
+                    format: uri
+                    example: "https://i.bandori.party/u/c/art/1982Moca-Aoba-Happy-ARBklB.png"
+                  art_trained:
+                    type: string
+                    format: uri
+                    example: "https://i.bandori.party/u/c/art/a/1982Moca-Aoba-Happy-VeC4QU.png"
+                  transparent:
+                    type: string
+                    format: uri
+                    example: "https://i.bandori.party/u/c/transparent/1982Moca-Aoba-Happy-Z7bJS9.png"
+                  transparent_trained:
+                    type: string
+                    format: uri
+                    example: "https://i.bandori.party/u/c/transparent/a/1982Moca-Aoba-Happy-17OFuA.png"
+                  skill_name:
+                    type: string
+                    example: null
+                    nullable: true
+                  japanese_skill_name:
+                    type: string
+                    example: "桜月夜に響く音"
+                    nullable: true
+                  i_skill_type:
+                    type: string
+                    example: null
+                    nullable: true
+                  i_side_skill_type:
+                    type: string
+                    example: null
+                    nullable: true
+                  skill_variables:
+                    type: object
+                    example: {}
+                  side_skill_template:
+                    type: string
+                    example: null
+                    nullable: true
+                  full_skill:
+                    type: string
+                    example: null
+                    nullable: true
+                  performance_min:
+                    type: integer
+                    example: 2903
+                  performance_max:
+                    type: integer
+                    example: 5776
+                  performance_trained_max:
+                    type: integer
+                    example: 9051
+                  technique_min:
+                    type: integer
+                    example: 4566
+                  technique_max:
+                    type: integer
+                    example: 9086
+                  technique_trained_max:
+                    type: integer
+                    example: 14007
+                  visual_min:
+                    type: integer
+                    example: 2712
+                  visual_max:
+                    type: integer
+                    example: 5397
+                  visual_trained_max:
+                    type: integer
+                    example: 8482
+                  cameo_members:
+                    type: string
+                    example: []
 
 components:
   headers:
