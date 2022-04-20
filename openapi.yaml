@@ -5,7 +5,7 @@ info:
   version: 1.0.0
   description: |
     # Description
-    - BanG Dream Databse API Schmea by OpenAPI ( Unofficial ).
+    - BanG Dream Databse API Schema by OpenAPI ( Unofficial ).
     - [BanG-Dream!-Girls-Band-API | MagiCircles/BanGDream GitHub Wiki](https://github.com/MagiCircles/BanGDream/wiki/BanG-Dream!-Girls-Band-API)
   termsOfService: https://bandori.party/about/
   license:
@@ -36,7 +36,7 @@ paths:
               schema:
                 type: string
                 example: Dummy Response
-  "/memberids":
+  "/memberids/":
     get:
       summary: Get All member id
       description: Get All member id
@@ -54,8 +54,8 @@ paths:
                 type: array
                 items:
                   type: integer
-                example: [501, 502, 503, 504, 505]
-  "/members/{memberId}":
+                example: [6, 7, 8, 9, 10]
+  "/members/{memberId}/":
     get:
       summary: Get specified member
       description: Get specified member
