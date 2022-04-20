@@ -366,7 +366,9 @@ paths:
                     type: integer
                     example: 8482
                   cameo_members:
-                    type: string
+                    type: array
+                    items:
+                      type: integer
                     example: []
 
 components:
