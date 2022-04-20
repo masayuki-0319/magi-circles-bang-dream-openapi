@@ -6,7 +6,8 @@ info:
   description: |
     # Description
     - BanG Dream Databse API Schema by OpenAPI ( Unofficial ).
-    - [BanG-Dream!-Girls-Band-API | MagiCircles/BanGDream GitHub Wiki](https://github.com/MagiCircles/BanGDream/wiki/BanG-Dream!-Girls-Band-API)
+    - [BanG-Dream!-Girls-Band-API | MagiCircles/BanGDream](https://github.com/MagiCircles/BanGDream/wiki/BanG-Dream!-Girls-Band-API)
+    - [API Code | MagiCircles/BanGDream ](https://github.com/MagiCircles/BanGDream/blob/master/api/views.py)
   termsOfService: https://bandori.party/about/
   license:
     name: MIT License
