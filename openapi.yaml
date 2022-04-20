@@ -1,0 +1,79 @@
+openapi: "3.0.3"
+
+info:
+  title: BanGDream Database API ( Unofficial )
+  version: 1.0.0
+  description: |
+    # Description
+    - BanG Dream Databse API Schmea by OpenAPI ( Unofficial ).
+    - [BanG-Dream!-Girls-Band-API | MagiCircles/BanGDream GitHub Wiki](https://github.com/MagiCircles/BanGDream/wiki/BanG-Dream!-Girls-Band-API)
+  termsOfService: https://bandori.party/about/
+  license:
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:{port}
+    description: Local
+    variables:
+      port:
+        enum: ["3000", "8080"]
+        default: "3000"
+  - url: https://bandori.party/api
+    description: Production
+
+paths:
+  "/":
+    get:
+      summary: All Endpoints
+      description: All Endpoints
+      deprecated: false
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: string
+                example: Dummy Response
+  "/memberids":
+    get:
+      summary: Get All member id
+      description: Get All member id
+      deprecated: false
+      tags: ["members"]
+      requestBody:
+        content:
+          application/json: {}
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: integer
+                example: [501, 502, 503, 504, 505]
+  "/members/{memberId}":
+    get:
+      summary: Get specified member
+      description: Get specified member
+      deprecated: false
+      tags: ["members"]
+      parameters:
+        - name: memberId
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        content:
+          application/json: {}
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: string
+                example: Dummy Response
