@@ -24,6 +24,8 @@ servers:
     description: Production
 
 tags:
+- name: root
+  description: Endpoints
 - name: members
   description: Band Members
 - name: cards
@@ -35,6 +37,7 @@ paths:
       summary: All Endpoints
       description: All Endpoints
       deprecated: false
+      tags: ["root"]
       responses:
         200:
           description: Success
