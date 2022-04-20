@@ -34,8 +34,44 @@ paths:
           content:
             application/json:
               schema:
-                type: string
-                example: Dummy Response
+                type: object
+                properties:
+                  members:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/memberids/
+                  memberids:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/memberids/
+                  cards:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/cardids/
+                  cardids:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/cardids/
+                  events:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/events/
+                  costumes:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/costumes/
+                  areaitems:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/areaitems/
+                  assets:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/assets/
+                  items:
+                    type: string
+                    format: uri
+                    example: https://bandori.party/api/items
   "/memberids/":
     get:
       summary: Get All member id
@@ -54,7 +90,7 @@ paths:
                 type: array
                 items:
                   type: integer
-                example: [6, 7, 8, 9, 10]
+                example: [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]
   "/members/{memberId}/":
     get:
       summary: Get specified member
@@ -122,15 +158,20 @@ paths:
                   food_like:
                     type: string
                     example: French fries, white rice
+                    nullable: true
                   food_dislike:
                     type: string
                     example: Natto (fermented soybeans)
+                    nullable: true
                   i_astrological_sign:
                     type: string
                     example: Cancer
+                    nullable: true
                   instrument:
                     type: string
                     example: Guitar & Vocals
+                    nullable: true
                   description:
                     type: string
                     example: She is highly active and always positive girl. Since she entered high school, she's been searching for something sparkling that could make her heart flutter. Along the way, she encountered a girl with a bright red star-shaped guitar, and since then, it's become her dream to form a girl band. She has a younger sister in her family of 4, but it's not exactly clear who acts like the elder
+                    nullable: true
