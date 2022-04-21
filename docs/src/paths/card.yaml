@@ -15,12 +15,7 @@ get:
     200:
       description: Success
       headers:
-        cache-control:
-          $ref: '#/components/headers/cache-control'
-        content-language:
-          $ref: '#/components/headers/content-language'
-        content-type:
-          $ref: '#/components/headers/content-type'
+        $ref: '#/components/headers'
       content:
         application/json:
           $ref: '#/components/schemas/Card'
