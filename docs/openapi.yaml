@@ -55,16 +55,6 @@ paths:
           content:
             application/json:
               $ref: '#/components/schemas/Endpoints'
-              example:
-                members: https://bandori.party/api/memberids/
-                memberids: https://bandori.party/api/memberids/
-                cards: https://bandori.party/api/cardids/
-                cardids: https://bandori.party/api/cardids/
-                events: https://bandori.party/api/events/
-                costumes: https://bandori.party/api/costumes/
-                areaitems: https://bandori.party/api/areaitems/
-                assets: https://bandori.party/api/assets/
-                items: https://bandori.party/api/items/
   /memberids/:
     get:
       summary: Get All member id
@@ -72,9 +62,6 @@ paths:
       deprecated: false
       tags:
         - members
-      requestBody:
-        content:
-          application/json: {}
       responses:
         '200':
           description: Success
@@ -142,9 +129,6 @@ paths:
           schema:
             type: string
           example: 6
-      requestBody:
-        content:
-          application/json: {}
       responses:
         '200':
           description: Success
@@ -165,9 +149,6 @@ paths:
       deprecated: false
       tags:
         - cards
-      requestBody:
-        content:
-          application/json: {}
       responses:
         '200':
           description: Success
@@ -205,9 +186,6 @@ paths:
           schema:
             type: string
           example: 1982
-      requestBody:
-        content:
-          application/json: {}
       responses:
         '200':
           description: Success
