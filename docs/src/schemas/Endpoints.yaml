@@ -1,0 +1,39 @@
+schema:
+  type: object
+  properties:
+    members:
+      type: string
+      format: uri
+      example: https://bandori.party/api/memberids/
+    memberids:
+      type: string
+      format: uri
+      example: https://bandori.party/api/memberids/
+    cards:
+      type: string
+      format: uri
+      example: https://bandori.party/api/cardids/
+    cardids:
+      type: string
+      format: uri
+      example: https://bandori.party/api/cardids/
+    events:
+      type: string
+      format: uri
+      example: https://bandori.party/api/events/
+    costumes:
+      type: string
+      format: uri
+      example: https://bandori.party/api/costumes/
+    areaitems:
+      type: string
+      format: uri
+      example: https://bandori.party/api/areaitems/
+    assets:
+      type: string
+      format: uri
+      example: https://bandori.party/api/assets/
+    items:
+      type: string
+      format: uri
+      example: https://bandori.party/api/items

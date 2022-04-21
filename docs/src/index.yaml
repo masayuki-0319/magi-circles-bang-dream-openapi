@@ -1,0 +1,68 @@
+openapi: "3.0.3"
+
+info:
+  title: BanGDream Database API ( Unofficial )
+  version: 1.0.0
+  description: |
+    # Description
+    - BanG Dream Databse API Schema by OpenAPI ( Unofficial ).
+    - [BanG-Dream!-Girls-Band-API | MagiCircles/BanGDream](https://github.com/MagiCircles/BanGDream/wiki/BanG-Dream!-Girls-Band-API)
+    - [API Code | MagiCircles/BanGDream ](https://github.com/MagiCircles/BanGDream/blob/master/api/views.py)
+  termsOfService: https://bandori.party/about/
+  license:
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:{port}
+    description: Local
+    variables:
+      port:
+        enum: ["3000", "8080"]
+        default: "3000"
+  - url: https://bandori.party/api
+    description: Production
+
+tags:
+- name: endpoints
+  description: Endpoints
+- name: members
+  description: Band Members
+- name: cards
+  description: Game Cards
+
+paths:
+  "/":
+    $ref: ./paths/endpoints.yaml
+  "/memberids/":
+    $ref: ./paths/memberids.yaml
+  "/members/{memberId}/":
+    $ref: ./paths/member.yaml
+  "/cardids/":
+    $ref: ./paths/cardids.yaml
+  "/cards/{cardsId}/":
+    $ref: ./paths/card.yaml
+
+components:
+  headers:
+    cache-control:
+      schema:
+        type: string
+        example: private
+    content-language:
+      schema:
+        type: string
+        enum: ["en", "ja"]
+        example: en
+    content-type:
+      schema:
+        type: string
+        example: application/json; charset=utf-8
+    cf-cache-status:
+      schema:
+        type: string
+        example: DYNAMIC
+    vary:
+      schema:
+        type: string
+        example: Accept-Language, Cookie

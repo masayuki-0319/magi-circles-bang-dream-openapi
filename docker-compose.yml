@@ -1,0 +1,19 @@
+version: '3'
+services:
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: 'swagger-ui'
+    ports:
+      - '8888:8080'
+    volumes:
+      - ./docs:/usr/share/nginx/html/docs
+    environment:
+      - URL=./docs/openapi.yaml
+
+  swagger-merger:
+    build:
+      dockerfile: ./Dockerfile
+    command: >
+      watch 'swagger-merger -i /docs/src/index.yaml -o /docs/openapi.yaml' /docs/src/
+    volumes:
+      - ./docs:/docs

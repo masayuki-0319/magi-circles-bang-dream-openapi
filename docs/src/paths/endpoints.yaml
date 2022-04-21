@@ -1,0 +1,28 @@
+get:
+  summary: All Endpoints
+  description: All Endpoints
+  deprecated: false
+  tags: ["endpoints"]
+  responses:
+    200:
+      description: Success
+      headers:
+        cache-control:
+          $ref: '#/components/headers/cache-control'
+        content-language:
+          $ref: '#/components/headers/content-language'
+        content-type:
+          $ref: '#/components/headers/content-type'
+      content:
+        application/json:
+          $ref: ../schemas/Endpoints.yaml
+          example:
+            members: https://bandori.party/api/memberids/
+            memberids: https://bandori.party/api/memberids/
+            cards: https://bandori.party/api/cardids/
+            cardids: https://bandori.party/api/cardids/
+            events: https://bandori.party/api/events/
+            costumes: https://bandori.party/api/costumes/
+            areaitems: https://bandori.party/api/areaitems/
+            assets: https://bandori.party/api/assets/
+            items: https://bandori.party/api/items/
