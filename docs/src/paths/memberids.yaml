@@ -2,10 +2,8 @@ get:
   summary: Get All member id
   description: Get All member id
   deprecated: false
-  tags: ["members"]
-  requestBody:
-    content:
-      application/json: {}
+  tags:
+    - members
   responses:
     200:
       description: Success

@@ -2,7 +2,8 @@ get:
   summary: Get specified member
   description: Get specified member
   deprecated: false
-  tags: ["members"]
+  tags:
+    - members
   parameters:
     - name: memberId
       in: path
@@ -10,9 +11,6 @@ get:
       required: true
       schema: { type: string }
       example: 6
-  requestBody:
-    content:
-      application/json: {}
   responses:
     200:
       description: Success

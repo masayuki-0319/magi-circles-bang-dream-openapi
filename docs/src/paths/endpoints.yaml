@@ -2,7 +2,8 @@ get:
   summary: All Endpoints
   description: All Endpoints
   deprecated: false
-  tags: ["endpoints"]
+  tags:
+    - endpoints
   responses:
     200:
       description: Success
@@ -16,13 +17,3 @@ get:
       content:
         application/json:
           $ref: '#/components/schemas/Endpoints'
-          example:
-            members: https://bandori.party/api/memberids/
-            memberids: https://bandori.party/api/memberids/
-            cards: https://bandori.party/api/cardids/
-            cardids: https://bandori.party/api/cardids/
-            events: https://bandori.party/api/events/
-            costumes: https://bandori.party/api/costumes/
-            areaitems: https://bandori.party/api/areaitems/
-            assets: https://bandori.party/api/assets/
-            items: https://bandori.party/api/items/

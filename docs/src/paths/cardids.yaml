@@ -2,10 +2,8 @@ get:
   summary: Get All card id
   description: Get All card id
   deprecated: false
-  tags: ["cards"]
-  requestBody:
-    content:
-      application/json: {}
+  tags:
+    - cards
   responses:
     200:
       description: Success
