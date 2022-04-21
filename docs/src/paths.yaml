@@ -1,0 +1,10 @@
+"/":
+  $ref: ./paths/endpoints.yaml
+"/memberids/":
+  $ref: ./paths/memberids.yaml
+"/members/{memberId}/":
+  $ref: ./paths/member.yaml
+"/cardids/":
+  $ref: ./paths/cardids.yaml
+"/cards/{cardsId}/":
+  $ref: ./paths/card.yaml

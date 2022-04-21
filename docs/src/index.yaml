@@ -1,4 +1,4 @@
-openapi: "3.0.3"
+openapi: "3.0.0"
 
 info:
   title: BanGDream Database API ( Unofficial )
@@ -32,16 +32,7 @@ tags:
   description: Game Cards
 
 paths:
-  "/":
-    $ref: ./paths/endpoints.yaml
-  "/memberids/":
-    $ref: ./paths/memberids.yaml
-  "/members/{memberId}/":
-    $ref: ./paths/member.yaml
-  "/cardids/":
-    $ref: ./paths/cardids.yaml
-  "/cards/{cardsId}/":
-    $ref: ./paths/card.yaml
+  $ref: "./paths.yaml"
 
 components:
   headers:
