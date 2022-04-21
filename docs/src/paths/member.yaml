@@ -25,4 +25,4 @@ get:
           $ref: '#/components/headers/content-type'
       content:
         application/json:
-          $ref: ../schemas/Member.yaml
+          $ref: '#/components/schemas/Member'

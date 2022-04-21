@@ -57,3 +57,5 @@ components:
       schema:
         type: string
         example: Accept-Language, Cookie
+  schemas:
+    $ref: "./schemas.yaml"

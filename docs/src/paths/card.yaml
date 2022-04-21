@@ -25,4 +25,4 @@ get:
           $ref: '#/components/headers/content-type'
       content:
         application/json:
-          $ref: ../schemas/Card.yaml
+          $ref: '#/components/schemas/Card'

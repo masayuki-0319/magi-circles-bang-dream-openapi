@@ -1,0 +1,6 @@
+Endpoints:
+  $ref: ./schemas/Endpoints.yaml
+Card:
+  $ref: ./schemas/Card.yaml
+Member:
+  $ref: ./schemas/Member.yaml
