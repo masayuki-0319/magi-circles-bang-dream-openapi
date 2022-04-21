@@ -15,7 +15,7 @@ get:
           $ref: '#/components/headers/content-type'
       content:
         application/json:
-          $ref: ./schemas/Endpoints
+          $ref: '#/components/schemas/Endpoints'
           example:
             members: https://bandori.party/api/memberids/
             memberids: https://bandori.party/api/memberids/
