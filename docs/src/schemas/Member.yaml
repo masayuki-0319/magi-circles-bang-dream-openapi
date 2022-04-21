@@ -1,0 +1,60 @@
+schema:
+  type: object
+  properties:
+    id:
+      type: string
+      example: 6
+    name:
+      type: string
+      example: Kasumi Toyama
+    japanese_name:
+      type: string
+      example: 戸山 香澄
+    image:
+      type: string
+      format: uri
+      example: https://i.bandori.party/u/i/6Kasumi-Toyama-Nhs7xX.png
+    square_image:
+      type: string
+      format: uri
+      example: https://i.bandori.party/u/i/m/6Kasumi-Toyama-jsVzTv.png
+    i_band:
+      type: string
+      enum: ["Poppin'Party", "Afterglow", "Hello, Happy World!", "Pastel*Palettes", "Roselia", "Morfonica", "RAISE A SUILEN"]
+      example: Poppin'Party
+    school:
+      type: string
+      example: Hanasakigawa Girls' Academy
+    i_school_year:
+      type: string
+      example: First
+    romaji_CV:
+      type: string
+      example: Aimi
+    CV:
+      type: string
+      example: 愛美
+    birthday:
+      type: string
+      format: \d{4}-\d{2}-\d{2}
+      example: "2015-07-14"
+    food_like:
+      type: string
+      example: French fries, white rice
+      nullable: true
+    food_dislike:
+      type: string
+      example: Natto (fermented soybeans)
+      nullable: true
+    i_astrological_sign:
+      type: string
+      example: Cancer
+      nullable: true
+    instrument:
+      type: string
+      example: Guitar & Vocals
+      nullable: true
+    description:
+      type: string
+      example: She is highly active and always positive girl. Since she entered high school, she's been searching for something sparkling that could make her heart flutter. Along the way, she encountered a girl with a bright red star-shaped guitar, and since then, it's become her dream to form a girl band. She has a younger sister in her family of 4, but it's not exactly clear who acts like the elder
+      nullable: true
