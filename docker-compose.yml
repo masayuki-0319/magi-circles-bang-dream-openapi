@@ -14,6 +14,6 @@ services:
     build:
       dockerfile: ./Dockerfile
     command: >
-      watch 'swagger-merger -i /src/index.yaml -o /openapi.yaml' /src/
+      watch 'swagger-merger -i /docs/src/index.yaml -o /docs/openapi.yaml' /docs/src/
     volumes:
       - ./docs:/docs
