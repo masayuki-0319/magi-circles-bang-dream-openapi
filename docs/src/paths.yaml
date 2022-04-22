@@ -10,3 +10,5 @@
   $ref: ./paths/card.yaml
 "/events/":
   $ref: ./paths/events.yaml
+"/event/{eventId}/":
+  $ref: ./paths/event.yaml

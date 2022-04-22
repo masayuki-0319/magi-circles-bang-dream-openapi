@@ -4,5 +4,7 @@ Card:
   $ref: ./schemas/Card.yaml
 Member:
   $ref: ./schemas/Member.yaml
+Events:
+  $ref: ./schemas/Events.yaml
 Event:
   $ref: ./schemas/Event.yaml

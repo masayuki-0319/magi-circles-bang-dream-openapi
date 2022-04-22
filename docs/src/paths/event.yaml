@@ -5,13 +5,12 @@ get:
   tags:
     - events
   parameters:
-    - name: offset
-      in: query
-      schema:
-        type: integer
-      description: The numbers of pagination
-      required: false
-      example: 1
+    - name: eventId
+      in: path
+      description: Event ID
+      required: true
+      schema: { type: string }
+      example: 191
   responses:
     200:
       description: Success
@@ -19,4 +18,4 @@ get:
         $ref: '#/components/headers'
       content:
         application/json:
-          $ref: '#/components/schemas/Events'
+          $ref: '#/components/schemas/Event'

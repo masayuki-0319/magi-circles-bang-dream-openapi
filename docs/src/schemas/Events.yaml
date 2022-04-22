@@ -1,0 +1,122 @@
+schema:
+  type: object
+  properties:
+    count:
+      type: integer
+      description: The number of all events count.
+    next:
+      type: string
+      format: uri
+      nullable: true
+      description: Next URL for pagination.
+      example: https://bandori.party/api/events/?page=2
+    previous:
+      type: string
+      format: uri
+      nullable: true
+      description: Previous URL for pagination.
+      example: https://bandori.party/api/events/?page=1
+    results:
+      type: array
+      items:
+        type: object
+        properties:
+          image:
+            type: string
+            format: uri
+            nullable: true
+            example: "https://i.bandori.party/u/e/191Road-to-Avalon-JLNIf8.png"
+          name:
+            type: string
+            nullable: true
+            example: Road to Avalon
+          japanese_name:
+            type: string
+            nullable: true
+            example: Road to Avalon
+          i_type:
+            type: string
+            nullable: true
+            example: normal
+          start_date:
+            type: string
+            format: date-time
+            nullable: true
+            example: "2022-04-20T06:00:00Z"
+          end_date:
+            type: string
+            nullable: true
+            format: date-time
+            example: "2022-04-28T11:59:00Z"
+          c_versions:
+            type: string
+            nullable: true
+            example:
+              - JP
+          english_image:
+            type: string
+            nullable: true
+            example: null
+          english_start_date:
+            type: string
+            nullable: true
+            example: null
+          english_end_date:
+            type: string
+            nullable: true
+            example: null
+          taiwanese_image:
+            type: string
+            nullable: true
+            example: null
+          taiwanese_start_date:
+            type: string
+            nullable: true
+            example: null
+          taiwanese_end_date:
+            type: string
+            nullable: true
+            example: null
+          korean_image:
+            type: string
+            nullable: true
+            example: null
+          korean_start_date:
+            type: string
+            nullable: true
+            example: null
+          korean_end_date:
+            type: string
+            nullable: true
+            example: null
+          main_card:
+            type: integer
+            description: The number of Card ID.
+            nullable: true
+            example: 1996
+          secondary_card:
+            type: integer
+            description: The number of Card ID.
+            nullable: true
+            example: 1997
+          i_boost_attribute:
+            type: string
+            nullable: true
+            description: The string of card attribute.
+            example: Cool
+          i_boost_stat:
+            type: string
+            nullable: true
+            example: null
+          boost_members:
+            type: array
+            items:
+              type: integer
+            description: The number of Member IDs.
+            nullable: true
+            example:
+              - 26
+              - 27
+              - 28
+              - 29
+              - 30
