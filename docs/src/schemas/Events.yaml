@@ -9,7 +9,7 @@ schema:
       format: uri
       nullable: true
       description: Next URL for pagination.
-      example: https://bandori.party/api/events/?page=2
+      example: https://bandori.party/api/events/?page=3
     previous:
       type: string
       format: uri

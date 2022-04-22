@@ -1,0 +1,21 @@
+get:
+  summary: Get costume
+  description: Get costume
+  deprecated: false
+  tags:
+    - costumes
+  parameters:
+    - name: costumeId
+      in: path
+      description: Costume ID
+      required: true
+      schema: { type: string }
+      example: 2129
+  responses:
+    200:
+      description: Success
+      headers:
+        $ref: '#/components/headers'
+      content:
+        application/json:
+          $ref: '#/components/schemas/Costume'

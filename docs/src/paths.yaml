@@ -12,3 +12,7 @@
   $ref: ./paths/events.yaml
 "/event/{eventId}/":
   $ref: ./paths/event.yaml
+"/costumes/":
+  $ref: ./paths/costumes.yaml
+"/costumes/{costumeId}/":
+  $ref: ./paths/costume.yaml

@@ -1,0 +1,48 @@
+schema:
+  type: object
+  properties:
+    count:
+      type: integer
+      description: The number of all costumes count.
+    next:
+      type: string
+      format: uri
+      nullable: true
+      description: Next URL for pagination.
+      example: https://bandori.party/api/costumes/?page=3
+    previous:
+      type: string
+      format: uri
+      nullable: true
+      description: Previous URL for pagination.
+      example: https://bandori.party/api/costumes/?page=1
+    results:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+            nullable: false
+            example: 2129
+          i_costume_type:
+            type: string
+            nullable: true
+            example: live
+          member:
+            type: integer
+            nullable: true
+            example: 14
+          card:
+            type: integer
+            nullable: true
+            example: 1993
+          display_image:
+            type: string
+            format: uri
+            nullable: true
+            example: //i.bandori.party/u/cos/p/fscBZmTomoe-Udagawa-Precious-birthday-mC3Sms.png
+          name:
+            type: string
+            nullable: true
+            example: null

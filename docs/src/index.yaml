@@ -36,6 +36,8 @@ tags:
   description: Game Cards
 - name: events
   description: Event
+- name: costumes
+  description: Costumes
 
 paths:
   $ref: "./paths.yaml"

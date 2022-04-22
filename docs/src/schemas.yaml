@@ -8,3 +8,7 @@ Events:
   $ref: ./schemas/Events.yaml
 Event:
   $ref: ./schemas/Event.yaml
+Costumes:
+  $ref: ./schemas/Costumes.yaml
+Costume:
+  $ref: ./schemas/Costume.yaml
