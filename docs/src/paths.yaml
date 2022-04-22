@@ -8,3 +8,5 @@
   $ref: ./paths/cardids.yaml
 "/cards/{cardsId}/":
   $ref: ./paths/card.yaml
+"/events/":
+  $ref: ./paths/events.yaml

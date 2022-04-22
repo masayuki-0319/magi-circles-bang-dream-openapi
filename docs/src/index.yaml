@@ -34,6 +34,8 @@ tags:
   description: Band Members
 - name: cards
   description: Game Cards
+- name: events
+  description: Event
 
 paths:
   $ref: "./paths.yaml"
