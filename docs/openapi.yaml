@@ -246,6 +246,7 @@ components:
         properties:
           id:
             type: integer
+            description: Card ID for https://bandori.party Database
             example: 1982
           member:
             type: integer

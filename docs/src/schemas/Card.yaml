@@ -3,6 +3,7 @@ schema:
   properties:
     id:
       type: integer
+      description: Card ID for https://bandori.party Database
       example: 1982
     member:
       type: integer
@@ -12,8 +13,12 @@ schema:
       example: 4
     i_attribute:
       type: string
-      enum: ["Happy", "Cool", "Powerful", "Cute"]
-      example: "Happy"
+      enum:
+        - Happy
+        - Cool
+        - Powerful
+        - Cute
+      example: Happy
     name:
       type: string
       example: null
