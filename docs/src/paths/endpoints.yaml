@@ -8,7 +8,9 @@ get:
     200:
       description: Success
       headers:
-        $ref: '#/components/schemas/Headers'
+        schema:
+          $ref: '#/components/schemas/Headers'
       content:
         application/json:
-          $ref: '#/components/schemas/Endpoints'
+          schema:
+            $ref: '#/components/schemas/Endpoints'
