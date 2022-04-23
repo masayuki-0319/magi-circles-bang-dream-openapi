@@ -1,0 +1,21 @@
+get:
+  summary: Get Asset
+  description: Get Asset
+  deprecated: false
+  tags:
+    - assets
+  parameters:
+    - name: assetId
+      in: path
+      description: Asset ID
+      required: true
+      schema: { type: string }
+      example: 1
+  responses:
+    200:
+      description: Success
+      headers:
+        $ref: '#/components/headers'
+      content:
+        application/json:
+          $ref: '#/components/schemas/Asset'

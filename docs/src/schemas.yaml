@@ -16,3 +16,7 @@ AreaItems:
   $ref: ./schemas/AreaItems.yaml
 AreaItem:
   $ref: ./schemas/AreaItem.yaml
+Assets:
+  $ref: ./schemas/assets.yaml
+Asset:
+  $ref: ./schemas/asset.yaml

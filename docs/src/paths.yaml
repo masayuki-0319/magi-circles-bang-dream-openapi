@@ -20,3 +20,7 @@
   $ref: ./paths/areaItems.yaml
 "/areaitems/{areaItemId}/":
   $ref: ./paths/areaItem.yaml
+"/assets/":
+  $ref: ./paths/assets.yaml
+"/assets/{assetId}/":
+  $ref: ./paths/asset.yaml
