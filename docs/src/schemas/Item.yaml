@@ -1,24 +1,23 @@
-schema:
-  type: object
-  properties:
-    id:
-      type: string
-      nullable: false
-      example: 1
-    name:
-      type: string
-      nullable: true
-      example: "Stars"
-    image:
-      type: string
-      format: uri
-      nullable: true
-      example: "https://i.bandori.party/u/items/1Star-Aq09eH.png"
-    i_type:
-      type: string
-      nullable: true
-      example: other
-    m_description:
-      type: string
-      nullable: true
-      example: null
+type: object
+properties:
+  id:
+    type: string
+    nullable: false
+    example: 1
+  name:
+    type: string
+    nullable: true
+    example: "Stars"
+  image:
+    type: string
+    format: uri
+    nullable: true
+    example: "https://i.bandori.party/u/items/1Star-Aq09eH.png"
+  i_type:
+    type: string
+    nullable: true
+    example: other
+  m_description:
+    type: string
+    nullable: true
+    example: null

@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.0.2
 info:
   title: BanGDream Database API ( Unofficial )
   version: 1.0.0
@@ -441,971 +441,956 @@ components:
         example: Accept-Language, Cookie
   schemas:
     Endpoints:
-      schema:
-        type: object
-        properties:
-          members:
-            type: string
-            format: uri
-            example: https://bandori.party/api/memberids/
-          memberids:
-            type: string
-            format: uri
-            example: https://bandori.party/api/memberids/
-          cards:
-            type: string
-            format: uri
-            example: https://bandori.party/api/cardids/
-          cardids:
-            type: string
-            format: uri
-            example: https://bandori.party/api/cardids/
-          events:
-            type: string
-            format: uri
-            example: https://bandori.party/api/events/
-          costumes:
-            type: string
-            format: uri
-            example: https://bandori.party/api/costumes/
-          areaitems:
-            type: string
-            format: uri
-            example: https://bandori.party/api/areaitems/
-          assets:
-            type: string
-            format: uri
-            example: https://bandori.party/api/assets/
-          items:
-            type: string
-            format: uri
-            example: https://bandori.party/api/items
+      type: object
+      properties:
+        members:
+          type: string
+          format: uri
+          example: https://bandori.party/api/memberids/
+        memberids:
+          type: string
+          format: uri
+          example: https://bandori.party/api/memberids/
+        cards:
+          type: string
+          format: uri
+          example: https://bandori.party/api/cardids/
+        cardids:
+          type: string
+          format: uri
+          example: https://bandori.party/api/cardids/
+        events:
+          type: string
+          format: uri
+          example: https://bandori.party/api/events/
+        costumes:
+          type: string
+          format: uri
+          example: https://bandori.party/api/costumes/
+        areaitems:
+          type: string
+          format: uri
+          example: https://bandori.party/api/areaitems/
+        assets:
+          type: string
+          format: uri
+          example: https://bandori.party/api/assets/
+        items:
+          type: string
+          format: uri
+          example: https://bandori.party/api/items
     Card:
-      schema:
-        type: object
-        properties:
-          id:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Card ID for https://bandori.party Database
+          example: 1982
+        member:
+          type: integer
+          example: 12
+        i_rarity:
+          type: integer
+          example: 4
+        i_attribute:
+          type: string
+          enum:
+            - Happy
+            - Cool
+            - Powerful
+            - Cute
+          example: Happy
+        name:
+          type: string
+          example: null
+          nullable: true
+        japanese_name:
+          type: string
+          example: さくらフォトフレーム
+          nullable: true
+        release_date:
+          type: string
+          example: '2022-04-01'
+        is_promo:
+          type: boolean
+          example: false
+        is_original:
+          type: boolean
+          example: false
+        image:
+          type: string
+          format: uri
+          example: https://i.bandori.party/u/c/1982Moca-Aoba-Happy-U9jwT4.png
+        image_trained:
+          type: string
+          format: uri
+          example: https://i.bandori.party/u/c/a/1982Moca-Aoba-Happy-5U2t3z.png
+        art:
+          type: string
+          format: uri
+          example: https://i.bandori.party/u/c/art/1982Moca-Aoba-Happy-ARBklB.png
+        art_trained:
+          type: string
+          format: uri
+          example: https://i.bandori.party/u/c/art/a/1982Moca-Aoba-Happy-VeC4QU.png
+        transparent:
+          type: string
+          format: uri
+          example: >-
+            https://i.bandori.party/u/c/transparent/1982Moca-Aoba-Happy-Z7bJS9.png
+        transparent_trained:
+          type: string
+          format: uri
+          example: >-
+            https://i.bandori.party/u/c/transparent/a/1982Moca-Aoba-Happy-17OFuA.png
+        skill_name:
+          type: string
+          example: null
+          nullable: true
+        japanese_skill_name:
+          type: string
+          example: 桜月夜に響く音
+          nullable: true
+        i_skill_type:
+          type: string
+          example: null
+          nullable: true
+        i_side_skill_type:
+          type: string
+          example: null
+          nullable: true
+        skill_variables:
+          type: object
+          example: {}
+        side_skill_template:
+          type: string
+          example: null
+          nullable: true
+        full_skill:
+          type: string
+          example: null
+          nullable: true
+        performance_min:
+          type: integer
+          example: 2903
+        performance_max:
+          type: integer
+          example: 5776
+        performance_trained_max:
+          type: integer
+          example: 9051
+        technique_min:
+          type: integer
+          example: 4566
+        technique_max:
+          type: integer
+          example: 9086
+        technique_trained_max:
+          type: integer
+          example: 14007
+        visual_min:
+          type: integer
+          example: 2712
+        visual_max:
+          type: integer
+          example: 5397
+        visual_trained_max:
+          type: integer
+          example: 8482
+        cameo_members:
+          type: array
+          items:
             type: integer
-            description: Card ID for https://bandori.party Database
-            example: 1982
-          member:
-            type: integer
-            example: 12
-          i_rarity:
-            type: integer
-            example: 4
-          i_attribute:
-            type: string
-            enum:
-              - Happy
-              - Cool
-              - Powerful
-              - Cute
-            example: Happy
-          name:
-            type: string
-            example: null
-            nullable: true
-          japanese_name:
-            type: string
-            example: さくらフォトフレーム
-            nullable: true
-          release_date:
-            type: string
-            example: '2022-04-01'
-          is_promo:
-            type: boolean
-            example: false
-          is_original:
-            type: boolean
-            example: false
-          image:
-            type: string
-            format: uri
-            example: https://i.bandori.party/u/c/1982Moca-Aoba-Happy-U9jwT4.png
-          image_trained:
-            type: string
-            format: uri
-            example: https://i.bandori.party/u/c/a/1982Moca-Aoba-Happy-5U2t3z.png
-          art:
-            type: string
-            format: uri
-            example: https://i.bandori.party/u/c/art/1982Moca-Aoba-Happy-ARBklB.png
-          art_trained:
-            type: string
-            format: uri
-            example: https://i.bandori.party/u/c/art/a/1982Moca-Aoba-Happy-VeC4QU.png
-          transparent:
-            type: string
-            format: uri
-            example: >-
-              https://i.bandori.party/u/c/transparent/1982Moca-Aoba-Happy-Z7bJS9.png
-          transparent_trained:
-            type: string
-            format: uri
-            example: >-
-              https://i.bandori.party/u/c/transparent/a/1982Moca-Aoba-Happy-17OFuA.png
-          skill_name:
-            type: string
-            example: null
-            nullable: true
-          japanese_skill_name:
-            type: string
-            example: 桜月夜に響く音
-            nullable: true
-          i_skill_type:
-            type: string
-            example: null
-            nullable: true
-          i_side_skill_type:
-            type: string
-            example: null
-            nullable: true
-          skill_variables:
-            type: object
-            example: {}
-          side_skill_template:
-            type: string
-            example: null
-            nullable: true
-          full_skill:
-            type: string
-            example: null
-            nullable: true
-          performance_min:
-            type: integer
-            example: 2903
-          performance_max:
-            type: integer
-            example: 5776
-          performance_trained_max:
-            type: integer
-            example: 9051
-          technique_min:
-            type: integer
-            example: 4566
-          technique_max:
-            type: integer
-            example: 9086
-          technique_trained_max:
-            type: integer
-            example: 14007
-          visual_min:
-            type: integer
-            example: 2712
-          visual_max:
-            type: integer
-            example: 5397
-          visual_trained_max:
-            type: integer
-            example: 8482
-          cameo_members:
-            type: array
-            items:
-              type: integer
-            example: []
+          example: []
     Member:
-      schema:
-        type: object
-        properties:
-          id:
-            type: string
-            example: 6
-          name:
-            type: string
-            example: Kasumi Toyama
-          japanese_name:
-            type: string
-            example: 戸山 香澄
-          image:
-            type: string
-            format: uri
-            example: https://i.bandori.party/u/i/6Kasumi-Toyama-Nhs7xX.png
-          square_image:
-            type: string
-            format: uri
-            example: https://i.bandori.party/u/i/m/6Kasumi-Toyama-jsVzTv.png
-          i_band:
-            type: string
-            enum:
-              - Poppin'Party
-              - Afterglow
-              - Hello, Happy World!
-              - Pastel*Palettes
-              - Roselia
-              - Morfonica
-              - RAISE A SUILEN
-            example: Poppin'Party
-          school:
-            type: string
-            example: Hanasakigawa Girls' Academy
-          i_school_year:
-            type: string
-            example: First
-          romaji_CV:
-            type: string
-            example: Aimi
-          CV:
-            type: string
-            example: 愛美
-          birthday:
-            type: string
-            format: \d{4}-\d{2}-\d{2}
-            example: '2015-07-14'
-          food_like:
-            type: string
-            example: French fries, white rice
-            nullable: true
-          food_dislike:
-            type: string
-            example: Natto (fermented soybeans)
-            nullable: true
-          i_astrological_sign:
-            type: string
-            example: Cancer
-            nullable: true
-          instrument:
-            type: string
-            example: Guitar & Vocals
-            nullable: true
-          description:
-            type: string
-            example: >-
-              She is highly active and always positive girl. Since she entered
-              high school, she's been searching for something sparkling that
-              could make her heart flutter. Along the way, she encountered a
-              girl with a bright red star-shaped guitar, and since then, it's
-              become her dream to form a girl band. She has a younger sister in
-              her family of 4, but it's not exactly clear who acts like the
-              elder
-            nullable: true
+      type: object
+      properties:
+        id:
+          type: string
+          example: 6
+        name:
+          type: string
+          example: Kasumi Toyama
+        japanese_name:
+          type: string
+          example: 戸山 香澄
+        image:
+          type: string
+          format: uri
+          example: https://i.bandori.party/u/i/6Kasumi-Toyama-Nhs7xX.png
+        square_image:
+          type: string
+          format: uri
+          example: https://i.bandori.party/u/i/m/6Kasumi-Toyama-jsVzTv.png
+        i_band:
+          type: string
+          enum:
+            - Poppin'Party
+            - Afterglow
+            - Hello, Happy World!
+            - Pastel*Palettes
+            - Roselia
+            - Morfonica
+            - RAISE A SUILEN
+          example: Poppin'Party
+        school:
+          type: string
+          example: Hanasakigawa Girls' Academy
+        i_school_year:
+          type: string
+          example: First
+        romaji_CV:
+          type: string
+          example: Aimi
+        CV:
+          type: string
+          example: 愛美
+        birthday:
+          type: string
+          format: \d{4}-\d{2}-\d{2}
+          example: '2015-07-14'
+        food_like:
+          type: string
+          example: French fries, white rice
+          nullable: true
+        food_dislike:
+          type: string
+          example: Natto (fermented soybeans)
+          nullable: true
+        i_astrological_sign:
+          type: string
+          example: Cancer
+          nullable: true
+        instrument:
+          type: string
+          example: Guitar & Vocals
+          nullable: true
+        description:
+          type: string
+          example: >-
+            She is highly active and always positive girl. Since she entered
+            high school, she's been searching for something sparkling that could
+            make her heart flutter. Along the way, she encountered a girl with a
+            bright red star-shaped guitar, and since then, it's become her dream
+            to form a girl band. She has a younger sister in her family of 4,
+            but it's not exactly clear who acts like the elder
+          nullable: true
     Events:
-      schema:
-        type: object
-        properties:
-          count:
-            type: integer
-            description: The number of all events count.
-          next:
-            type: string
-            format: uri
-            nullable: true
-            description: Next URL for pagination.
-            example: https://bandori.party/api/events/?page=3
-          previous:
-            type: string
-            format: uri
-            nullable: true
-            description: Previous URL for pagination.
-            example: https://bandori.party/api/events/?page=1
-          results:
-            type: array
-            items:
-              type: object
-              properties:
-                image:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: https://i.bandori.party/u/e/191Road-to-Avalon-JLNIf8.png
-                name:
-                  type: string
-                  nullable: true
-                  example: Road to Avalon
-                japanese_name:
-                  type: string
-                  nullable: true
-                  example: Road to Avalon
-                i_type:
-                  type: string
-                  nullable: true
-                  example: normal
-                start_date:
-                  type: string
-                  format: date-time
-                  nullable: true
-                  example: '2022-04-20T06:00:00Z'
-                end_date:
-                  type: string
-                  nullable: true
-                  format: date-time
-                  example: '2022-04-28T11:59:00Z'
-                c_versions:
-                  type: string
-                  nullable: true
-                  example:
-                    - JP
-                english_image:
-                  type: string
-                  nullable: true
-                  example: null
-                english_start_date:
-                  type: string
-                  nullable: true
-                  example: null
-                english_end_date:
-                  type: string
-                  nullable: true
-                  example: null
-                taiwanese_image:
-                  type: string
-                  nullable: true
-                  example: null
-                taiwanese_start_date:
-                  type: string
-                  nullable: true
-                  example: null
-                taiwanese_end_date:
-                  type: string
-                  nullable: true
-                  example: null
-                korean_image:
-                  type: string
-                  nullable: true
-                  example: null
-                korean_start_date:
-                  type: string
-                  nullable: true
-                  example: null
-                korean_end_date:
-                  type: string
-                  nullable: true
-                  example: null
-                main_card:
-                  type: integer
-                  description: The number of Card ID.
-                  nullable: true
-                  example: 1996
-                secondary_card:
-                  type: integer
-                  description: The number of Card ID.
-                  nullable: true
-                  example: 1997
-                i_boost_attribute:
-                  type: string
-                  nullable: true
-                  description: The string of card attribute.
-                  example: Cool
-                i_boost_stat:
-                  type: string
-                  nullable: true
-                  example: null
-                boost_members:
-                  type: array
-                  items:
-                    type: integer
-                  description: The number of Member IDs.
-                  nullable: true
-                  example:
-                    - 26
-                    - 27
-                    - 28
-                    - 29
-                    - 30
-    Event:
-      schema:
-        type: object
-        properties:
-          image:
-            type: string
-            format: uri
-            nullable: true
-            example: https://i.bandori.party/u/e/191Road-to-Avalon-JLNIf8.png
-          name:
-            type: string
-            nullable: true
-            example: Road to Avalon
-          japanese_name:
-            type: string
-            nullable: true
-            example: Road to Avalon
-          i_type:
-            type: string
-            nullable: true
-            example: normal
-          start_date:
-            type: string
-            format: date-time
-            nullable: true
-            example: '2022-04-20T06:00:00Z'
-          end_date:
-            type: string
-            nullable: true
-            format: date-time
-            example: '2022-04-28T11:59:00Z'
-          c_versions:
-            type: string
-            nullable: true
-            example:
-              - JP
-          english_image:
-            type: string
-            nullable: true
-            example: null
-          english_start_date:
-            type: string
-            nullable: true
-            example: null
-          english_end_date:
-            type: string
-            nullable: true
-            example: null
-          taiwanese_image:
-            type: string
-            nullable: true
-            example: null
-          taiwanese_start_date:
-            type: string
-            nullable: true
-            example: null
-          taiwanese_end_date:
-            type: string
-            nullable: true
-            example: null
-          korean_image:
-            type: string
-            nullable: true
-            example: null
-          korean_start_date:
-            type: string
-            nullable: true
-            example: null
-          korean_end_date:
-            type: string
-            nullable: true
-            example: null
-          main_card:
-            type: integer
-            description: The number of Card ID.
-            nullable: true
-            example: 1996
-          secondary_card:
-            type: integer
-            description: The number of Card ID.
-            nullable: true
-            example: 1997
-          i_boost_attribute:
-            type: string
-            nullable: true
-            description: The string of card attribute.
-            example: Cool
-          i_boost_stat:
-            type: string
-            nullable: true
-            example: null
-          boost_members:
-            type: array
-            items:
-              type: integer
-            description: The number of Member IDs.
-            nullable: true
-            example:
-              - 26
-              - 27
-              - 28
-              - 29
-              - 30
-    Costumes:
-      schema:
-        type: object
-        properties:
-          count:
-            type: integer
-            description: The number of all costumes count.
-          next:
-            type: string
-            format: uri
-            nullable: true
-            description: Next URL for pagination.
-            example: https://bandori.party/api/costumes/?page=3
-          previous:
-            type: string
-            format: uri
-            nullable: true
-            description: Previous URL for pagination.
-            example: https://bandori.party/api/costumes/?page=1
-          results:
-            type: array
-            items:
-              type: object
-              properties:
-                id:
-                  type: integer
-                  nullable: false
-                  example: 2129
-                i_costume_type:
-                  type: string
-                  nullable: true
-                  example: live
-                member:
-                  type: integer
-                  nullable: true
-                  example: 14
-                card:
-                  type: integer
-                  nullable: true
-                  example: 1993
-                display_image:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: >-
-                    //i.bandori.party/u/cos/p/fscBZmTomoe-Udagawa-Precious-birthday-mC3Sms.png
-                name:
-                  type: string
-                  nullable: true
-                  example: null
-    Costume:
-      schema:
-        type: object
-        properties:
-          id:
-            type: integer
-            nullable: false
-            example: 2129
-          i_costume_type:
-            type: string
-            nullable: true
-            example: live
-          member:
-            type: integer
-            nullable: true
-            example: 14
-          card:
-            type: integer
-            nullable: true
-            example: 1993
-          display_image:
-            type: string
-            format: uri
-            nullable: true
-            example: >-
-              //i.bandori.party/u/cos/p/fscBZmTomoe-Udagawa-Precious-birthday-mC3Sms.png
-          name:
-            type: string
-            nullable: true
-            example: null
-    AreaItems:
-      schema:
-        type: object
-        properties:
-          count:
-            type: integer
-            description: The number of all Area Items count.
-            example: 70
-          next:
-            type: string
-            format: uri
-            nullable: true
-            description: Next URL for pagination.
-            example: https://bandori.party/api/areaitems/?page=3
-          previous:
-            type: string
-            format: uri
-            nullable: true
-            description: Previous URL for pagination.
-            example: https://bandori.party/api/areaitems/?page=1
-          results:
-            type: array
-            items:
-              type: object
-              properties:
-                id:
-                  type: integer
-                  nullable: false
-                  example: 1
-                image:
-                  type: string
-                  format: uri
-                  nullable: false
-                  example: https://i.bandori.party/u/areas/items/1Studio-Mic-0P2Ru4.png
-                name:
-                  type: string
-                  nullable: false
-                  example: |
-                    スタジオ Mic
-                area:
-                  type: integer
-                  nullable: false
-                  example: 5
-                i_type:
-                  type: string
-                  nullable: false
-                  example: studio
-                i_instrument:
-                  type: string
-                  nullable: false
-                  example: mic
-                i_band:
-                  type: string
-                  nullable: false
-                  example: Poppin'Party
-                i_attribute:
-                  type: string
-                  nullable: false
-                  example: null
-                i_boost_stat:
-                  type: string
-                  nullable: true
-                  example: null
-                max_level:
-                  type: integer
-                  nullable: false
-                  example: 6
-                is_percent:
-                  type: boolean
-                  nullable: false
-                  example: true
-                life_list:
-                  type: string
-                  nullable: true
-                  example: null
-                about:
-                  type: string
-                  nullable: false
-                  example: >-
-                    A typical studio microphone. Poppin Party's Kasumi uses it
-                    often for practice.
-                value_list:
-                  type: integer
-                  format: double
-                  nullable: false
-                  example:
-                    - 2
-                    - 2.5
-                    - 3
-                    - 3.5
-                    - 4
-                    - 4.5
-    AreaItem:
-      schema:
-        type: object
-        properties:
-          id:
-            type: string
-            nullable: false
-            example: 1
-          image:
-            type: string
-            format: uri
-            nullable: false
-            example: https://i.bandori.party/u/areas/items/1Studio-Mic-0P2Ru4.png
-          name:
-            type: string
-            nullable: false
-            example: |
-              スタジオ Mic
-          area:
-            type: string
-            nullable: false
-            example: 5
-          i_type:
-            type: string
-            nullable: false
-            example: studio
-          i_instrument:
-            type: string
-            nullable: false
-            example: mic
-          i_band:
-            type: string
-            nullable: false
-            example: Poppin'Party
-          i_attribute:
-            type: string
-            nullable: false
-            example: null
-          i_boost_stat:
-            type: string
-            nullable: true
-            example: null
-          max_level:
-            type: integer
-            nullable: false
-            example: 6
-          is_percent:
-            type: boolean
-            nullable: false
-            example: true
-          life_list:
-            type: string
-            nullable: true
-            example: null
-          about:
-            type: string
-            nullable: false
-            example: >-
-              A typical studio microphone. Poppin Party's Kasumi uses it often
-              for practice.
-          value_list:
-            type: integer
-            format: double
-            nullable: false
-            example:
-              - 2
-              - 2.5
-              - 3
-              - 3.5
-              - 4
-              - 4.5
-    Assets:
-      schema:
-        type: object
-        properties:
-          count:
-            type: integer
-            description: The number of all Assets count.
-            example: 2319
-          next:
-            type: string
-            format: uri
-            nullable: true
-            description: Next URL for pagination.
-            example: https://bandori.party/api/assets/?page=3
-          previous:
-            type: string
-            format: uri
-            nullable: true
-            description: Previous URL for pagination.
-            example: https://bandori.party/api/assets/?page=1
-          results:
-            type: array
-            items:
-              type: object
-              properties:
-                id:
-                  type: string
-                  nullable: true
-                  example: 1
-                i_type:
-                  type: string
-                  enum:
-                    - comic
-                    - officialart
-                    - stamp
-                    - interface
-                    - background
-                  description: Image File Situation. Maybe others...
-                  nullable: true
-                  example: comic
-                image:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: >-
-                    https://i.bandori.party/u/asset/1Kasumi-nese-Level-3-FQlDfv.png
-                english_image:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: >-
-                    https://i.bandori.party/u/asset/e/1Kasumese-Level-3-ANjpT0.png
-                taiwanese_image:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: >-
-                    https://i.bandori.party/u/asset/t/1Kasumi-nese-Level-3-TgcEZ8.png
-                korean_image:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: >-
-                    https://i.bandori.party/u/asset/k/1Kasumi-nese-Level-3-VdKkt6.png
-                name:
-                  type: string
-                  nullable: true
-                  example: Kasumese, Level 3
-                i_band:
-                  type: string
-                  nullable: true
-                  example: null
-                c_tags:
-                  type: object
-                  properties:
-                    twitter: string
-                    seasonal: string
-                  nullable: true
-                  example: null
-                event:
-                  type: integer
-                  nullable: true
-                  example: null
-                value:
-                  type: integer
-                  nullable: true
-                  example: 1
-                source:
-                  type: string
-                  nullable: true
-                  example: null
-                source_link:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: null
-                song:
-                  type: string
-                  nullable: true
-                  example: null
-                members:
-                  type: array
-                  items:
-                    type: integer
-                  nullable: true
-                  example:
-                    - 6
-                    - 10
-    Asset:
-      schema:
-        type: object
-        properties:
-          id:
-            type: string
-            nullable: true
-            example: 1
-          i_type:
-            type: string
-            enum:
-              - comic
-              - officialart
-              - stamp
-              - interface
-              - background
-            description: Image File Situation. Maybe others...
-            nullable: true
-            example: comic
-          image:
-            type: string
-            format: uri
-            nullable: true
-            example: https://i.bandori.party/u/asset/1Kasumi-nese-Level-3-FQlDfv.png
-          english_image:
-            type: string
-            format: uri
-            nullable: true
-            example: https://i.bandori.party/u/asset/e/1Kasumese-Level-3-ANjpT0.png
-          taiwanese_image:
-            type: string
-            format: uri
-            nullable: true
-            example: https://i.bandori.party/u/asset/t/1Kasumi-nese-Level-3-TgcEZ8.png
-          korean_image:
-            type: string
-            format: uri
-            nullable: true
-            example: https://i.bandori.party/u/asset/k/1Kasumi-nese-Level-3-VdKkt6.png
-          name:
-            type: string
-            nullable: true
-            example: Kasumese, Level 3
-          i_band:
-            type: string
-            nullable: true
-            example: null
-          c_tags:
+      type: object
+      properties:
+        count:
+          type: integer
+          description: The number of all events count.
+        next:
+          type: string
+          format: uri
+          nullable: true
+          description: Next URL for pagination.
+          example: https://bandori.party/api/events/?page=3
+        previous:
+          type: string
+          format: uri
+          nullable: true
+          description: Previous URL for pagination.
+          example: https://bandori.party/api/events/?page=1
+        results:
+          type: array
+          items:
             type: object
             properties:
-              twitter: string
-              seasonal: string
-            nullable: true
-            example: null
-          event:
+              image:
+                type: string
+                format: uri
+                nullable: true
+                example: https://i.bandori.party/u/e/191Road-to-Avalon-JLNIf8.png
+              name:
+                type: string
+                nullable: true
+                example: Road to Avalon
+              japanese_name:
+                type: string
+                nullable: true
+                example: Road to Avalon
+              i_type:
+                type: string
+                nullable: true
+                example: normal
+              start_date:
+                type: string
+                format: date-time
+                nullable: true
+                example: '2022-04-20T06:00:00Z'
+              end_date:
+                type: string
+                nullable: true
+                format: date-time
+                example: '2022-04-28T11:59:00Z'
+              c_versions:
+                type: string
+                nullable: true
+                example:
+                  - JP
+              english_image:
+                type: string
+                nullable: true
+                example: null
+              english_start_date:
+                type: string
+                nullable: true
+                example: null
+              english_end_date:
+                type: string
+                nullable: true
+                example: null
+              taiwanese_image:
+                type: string
+                nullable: true
+                example: null
+              taiwanese_start_date:
+                type: string
+                nullable: true
+                example: null
+              taiwanese_end_date:
+                type: string
+                nullable: true
+                example: null
+              korean_image:
+                type: string
+                nullable: true
+                example: null
+              korean_start_date:
+                type: string
+                nullable: true
+                example: null
+              korean_end_date:
+                type: string
+                nullable: true
+                example: null
+              main_card:
+                type: integer
+                description: The number of Card ID.
+                nullable: true
+                example: 1996
+              secondary_card:
+                type: integer
+                description: The number of Card ID.
+                nullable: true
+                example: 1997
+              i_boost_attribute:
+                type: string
+                nullable: true
+                description: The string of card attribute.
+                example: Cool
+              i_boost_stat:
+                type: string
+                nullable: true
+                example: null
+              boost_members:
+                type: array
+                items:
+                  type: integer
+                description: The number of Member IDs.
+                nullable: true
+                example:
+                  - 26
+                  - 27
+                  - 28
+                  - 29
+                  - 30
+    Event:
+      type: object
+      properties:
+        image:
+          type: string
+          format: uri
+          nullable: true
+          example: https://i.bandori.party/u/e/191Road-to-Avalon-JLNIf8.png
+        name:
+          type: string
+          nullable: true
+          example: Road to Avalon
+        japanese_name:
+          type: string
+          nullable: true
+          example: Road to Avalon
+        i_type:
+          type: string
+          nullable: true
+          example: normal
+        start_date:
+          type: string
+          format: date-time
+          nullable: true
+          example: '2022-04-20T06:00:00Z'
+        end_date:
+          type: string
+          nullable: true
+          format: date-time
+          example: '2022-04-28T11:59:00Z'
+        c_versions:
+          type: string
+          nullable: true
+          example:
+            - JP
+        english_image:
+          type: string
+          nullable: true
+          example: null
+        english_start_date:
+          type: string
+          nullable: true
+          example: null
+        english_end_date:
+          type: string
+          nullable: true
+          example: null
+        taiwanese_image:
+          type: string
+          nullable: true
+          example: null
+        taiwanese_start_date:
+          type: string
+          nullable: true
+          example: null
+        taiwanese_end_date:
+          type: string
+          nullable: true
+          example: null
+        korean_image:
+          type: string
+          nullable: true
+          example: null
+        korean_start_date:
+          type: string
+          nullable: true
+          example: null
+        korean_end_date:
+          type: string
+          nullable: true
+          example: null
+        main_card:
+          type: integer
+          description: The number of Card ID.
+          nullable: true
+          example: 1996
+        secondary_card:
+          type: integer
+          description: The number of Card ID.
+          nullable: true
+          example: 1997
+        i_boost_attribute:
+          type: string
+          nullable: true
+          description: The string of card attribute.
+          example: Cool
+        i_boost_stat:
+          type: string
+          nullable: true
+          example: null
+        boost_members:
+          type: array
+          items:
             type: integer
-            nullable: true
-            example: null
-          value:
+          description: The number of Member IDs.
+          nullable: true
+          example:
+            - 26
+            - 27
+            - 28
+            - 29
+            - 30
+    Costumes:
+      type: object
+      properties:
+        count:
+          type: integer
+          description: The number of all costumes count.
+        next:
+          type: string
+          format: uri
+          nullable: true
+          description: Next URL for pagination.
+          example: https://bandori.party/api/costumes/?page=3
+        previous:
+          type: string
+          format: uri
+          nullable: true
+          description: Previous URL for pagination.
+          example: https://bandori.party/api/costumes/?page=1
+        results:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                nullable: false
+                example: 2129
+              i_costume_type:
+                type: string
+                nullable: true
+                example: live
+              member:
+                type: integer
+                nullable: true
+                example: 14
+              card:
+                type: integer
+                nullable: true
+                example: 1993
+              display_image:
+                type: string
+                format: uri
+                nullable: true
+                example: >-
+                  //i.bandori.party/u/cos/p/fscBZmTomoe-Udagawa-Precious-birthday-mC3Sms.png
+              name:
+                type: string
+                nullable: true
+                example: null
+    Costume:
+      type: object
+      properties:
+        id:
+          type: integer
+          nullable: false
+          example: 2129
+        i_costume_type:
+          type: string
+          nullable: true
+          example: live
+        member:
+          type: integer
+          nullable: true
+          example: 14
+        card:
+          type: integer
+          nullable: true
+          example: 1993
+        display_image:
+          type: string
+          format: uri
+          nullable: true
+          example: >-
+            //i.bandori.party/u/cos/p/fscBZmTomoe-Udagawa-Precious-birthday-mC3Sms.png
+        name:
+          type: string
+          nullable: true
+          example: null
+    AreaItems:
+      type: object
+      properties:
+        count:
+          type: integer
+          description: The number of all Area Items count.
+          example: 70
+        next:
+          type: string
+          format: uri
+          nullable: true
+          description: Next URL for pagination.
+          example: https://bandori.party/api/areaitems/?page=3
+        previous:
+          type: string
+          format: uri
+          nullable: true
+          description: Previous URL for pagination.
+          example: https://bandori.party/api/areaitems/?page=1
+        results:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                nullable: false
+                example: 1
+              image:
+                type: string
+                format: uri
+                nullable: false
+                example: https://i.bandori.party/u/areas/items/1Studio-Mic-0P2Ru4.png
+              name:
+                type: string
+                nullable: false
+                example: |
+                  スタジオ Mic
+              area:
+                type: integer
+                nullable: false
+                example: 5
+              i_type:
+                type: string
+                nullable: false
+                example: studio
+              i_instrument:
+                type: string
+                nullable: false
+                example: mic
+              i_band:
+                type: string
+                nullable: false
+                example: Poppin'Party
+              i_attribute:
+                type: string
+                nullable: false
+                example: null
+              i_boost_stat:
+                type: string
+                nullable: true
+                example: null
+              max_level:
+                type: integer
+                nullable: false
+                example: 6
+              is_percent:
+                type: boolean
+                nullable: false
+                example: true
+              life_list:
+                type: string
+                nullable: true
+                example: null
+              about:
+                type: string
+                nullable: false
+                example: >-
+                  A typical studio microphone. Poppin Party's Kasumi uses it
+                  often for practice.
+              value_list:
+                type: integer
+                format: double
+                nullable: false
+                example:
+                  - 2
+                  - 2.5
+                  - 3
+                  - 3.5
+                  - 4
+                  - 4.5
+    AreaItem:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: false
+          example: 1
+        image:
+          type: string
+          format: uri
+          nullable: false
+          example: https://i.bandori.party/u/areas/items/1Studio-Mic-0P2Ru4.png
+        name:
+          type: string
+          nullable: false
+          example: |
+            スタジオ Mic
+        area:
+          type: string
+          nullable: false
+          example: 5
+        i_type:
+          type: string
+          nullable: false
+          example: studio
+        i_instrument:
+          type: string
+          nullable: false
+          example: mic
+        i_band:
+          type: string
+          nullable: false
+          example: Poppin'Party
+        i_attribute:
+          type: string
+          nullable: false
+          example: null
+        i_boost_stat:
+          type: string
+          nullable: true
+          example: null
+        max_level:
+          type: integer
+          nullable: false
+          example: 6
+        is_percent:
+          type: boolean
+          nullable: false
+          example: true
+        life_list:
+          type: string
+          nullable: true
+          example: null
+        about:
+          type: string
+          nullable: false
+          example: >-
+            A typical studio microphone. Poppin Party's Kasumi uses it often for
+            practice.
+        value_list:
+          type: integer
+          format: double
+          nullable: false
+          example:
+            - 2
+            - 2.5
+            - 3
+            - 3.5
+            - 4
+            - 4.5
+    Assets:
+      type: object
+      properties:
+        count:
+          type: integer
+          description: The number of all Assets count.
+          example: 2319
+        next:
+          type: string
+          format: uri
+          nullable: true
+          description: Next URL for pagination.
+          example: https://bandori.party/api/assets/?page=3
+        previous:
+          type: string
+          format: uri
+          nullable: true
+          description: Previous URL for pagination.
+          example: https://bandori.party/api/assets/?page=1
+        results:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                nullable: true
+                example: 1
+              i_type:
+                type: string
+                enum:
+                  - comic
+                  - officialart
+                  - stamp
+                  - interface
+                  - background
+                description: Image File Situation. Maybe others...
+                nullable: true
+                example: comic
+              image:
+                type: string
+                format: uri
+                nullable: true
+                example: >-
+                  https://i.bandori.party/u/asset/1Kasumi-nese-Level-3-FQlDfv.png
+              english_image:
+                type: string
+                format: uri
+                nullable: true
+                example: https://i.bandori.party/u/asset/e/1Kasumese-Level-3-ANjpT0.png
+              taiwanese_image:
+                type: string
+                format: uri
+                nullable: true
+                example: >-
+                  https://i.bandori.party/u/asset/t/1Kasumi-nese-Level-3-TgcEZ8.png
+              korean_image:
+                type: string
+                format: uri
+                nullable: true
+                example: >-
+                  https://i.bandori.party/u/asset/k/1Kasumi-nese-Level-3-VdKkt6.png
+              name:
+                type: string
+                nullable: true
+                example: Kasumese, Level 3
+              i_band:
+                type: string
+                nullable: true
+                example: null
+              c_tags:
+                type: object
+                properties:
+                  twitter: string
+                  seasonal: string
+                nullable: true
+                example: null
+              event:
+                type: integer
+                nullable: true
+                example: null
+              value:
+                type: integer
+                nullable: true
+                example: 1
+              source:
+                type: string
+                nullable: true
+                example: null
+              source_link:
+                type: string
+                format: uri
+                nullable: true
+                example: null
+              song:
+                type: string
+                nullable: true
+                example: null
+              members:
+                type: array
+                items:
+                  type: integer
+                nullable: true
+                example:
+                  - 6
+                  - 10
+    Asset:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+          example: 1
+        i_type:
+          type: string
+          enum:
+            - comic
+            - officialart
+            - stamp
+            - interface
+            - background
+          description: Image File Situation. Maybe others...
+          nullable: true
+          example: comic
+        image:
+          type: string
+          format: uri
+          nullable: true
+          example: https://i.bandori.party/u/asset/1Kasumi-nese-Level-3-FQlDfv.png
+        english_image:
+          type: string
+          format: uri
+          nullable: true
+          example: https://i.bandori.party/u/asset/e/1Kasumese-Level-3-ANjpT0.png
+        taiwanese_image:
+          type: string
+          format: uri
+          nullable: true
+          example: https://i.bandori.party/u/asset/t/1Kasumi-nese-Level-3-TgcEZ8.png
+        korean_image:
+          type: string
+          format: uri
+          nullable: true
+          example: https://i.bandori.party/u/asset/k/1Kasumi-nese-Level-3-VdKkt6.png
+        name:
+          type: string
+          nullable: true
+          example: Kasumese, Level 3
+        i_band:
+          type: string
+          nullable: true
+          example: null
+        c_tags:
+          type: object
+          properties:
+            twitter: string
+            seasonal: string
+          nullable: true
+          example: null
+        event:
+          type: integer
+          nullable: true
+          example: null
+        value:
+          type: integer
+          nullable: true
+          example: 1
+        source:
+          type: string
+          nullable: true
+          example: null
+        source_link:
+          type: string
+          format: uri
+          nullable: true
+          example: null
+        song:
+          type: string
+          nullable: true
+          example: null
+        members:
+          type: array
+          items:
             type: integer
-            nullable: true
-            example: 1
-          source:
-            type: string
-            nullable: true
-            example: null
-          source_link:
-            type: string
-            format: uri
-            nullable: true
-            example: null
-          song:
-            type: string
-            nullable: true
-            example: null
-          members:
-            type: array
-            items:
-              type: integer
-            nullable: true
-            example:
-              - 6
-              - 10
+          nullable: true
+          example:
+            - 6
+            - 10
     Items:
-      schema:
-        type: object
-        properties:
-          count:
-            type: integer
-            description: The number of all items count.
-          next:
-            type: string
-            format: uri
-            nullable: true
-            description: Next URL for pagination.
-            example: https://bandori.party/api/items/?page=3
-          previous:
-            type: string
-            format: uri
-            nullable: true
-            description: Previous URL for pagination.
-            example: https://bandori.party/api/items/?page=1
-          results:
-            type: array
-            items:
-              type: object
-              properties:
-                id:
-                  type: string
-                  nullable: false
-                  example: 1
-                name:
-                  type: string
-                  nullable: true
-                  example: Stars
-                image:
-                  type: string
-                  format: uri
-                  nullable: true
-                  example: https://i.bandori.party/u/items/1Star-Aq09eH.png
-                i_type:
-                  type: string
-                  nullable: true
-                  example: other
-                m_description:
-                  type: string
-                  nullable: true
-                  example: null
+      type: object
+      properties:
+        count:
+          type: integer
+          description: The number of all items count.
+        next:
+          type: string
+          format: uri
+          nullable: true
+          description: Next URL for pagination.
+          example: https://bandori.party/api/items/?page=3
+        previous:
+          type: string
+          format: uri
+          nullable: true
+          description: Previous URL for pagination.
+          example: https://bandori.party/api/items/?page=1
+        results:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                nullable: false
+                example: 1
+              name:
+                type: string
+                nullable: true
+                example: Stars
+              image:
+                type: string
+                format: uri
+                nullable: true
+                example: https://i.bandori.party/u/items/1Star-Aq09eH.png
+              i_type:
+                type: string
+                nullable: true
+                example: other
+              m_description:
+                type: string
+                nullable: true
+                example: null
     Item:
-      schema:
-        type: object
-        properties:
-          id:
-            type: string
-            nullable: false
-            example: 1
-          name:
-            type: string
-            nullable: true
-            example: Stars
-          image:
-            type: string
-            format: uri
-            nullable: true
-            example: https://i.bandori.party/u/items/1Star-Aq09eH.png
-          i_type:
-            type: string
-            nullable: true
-            example: other
-          m_description:
-            type: string
-            nullable: true
-            example: null
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: false
+          example: 1
+        name:
+          type: string
+          nullable: true
+          example: Stars
+        image:
+          type: string
+          format: uri
+          nullable: true
+          example: https://i.bandori.party/u/items/1Star-Aq09eH.png
+        i_type:
+          type: string
+          nullable: true
+          example: other
+        m_description:
+          type: string
+          nullable: true
+          example: null

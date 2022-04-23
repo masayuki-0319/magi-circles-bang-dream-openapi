@@ -1,103 +1,102 @@
-schema:
-  type: object
-  properties:
-    count:
-      type: integer
-      description: The number of all Assets count.
-      example: 2319
-    next:
-      type: string
-      format: uri
-      nullable: true
-      description: Next URL for pagination.
-      example: https://bandori.party/api/assets/?page=3
-    previous:
-      type: string
-      format: uri
-      nullable: true
-      description: Previous URL for pagination.
-      example: https://bandori.party/api/assets/?page=1
-    results:
-      type: array
-      items:
-        type: object
-        properties:
-          id:
-            type: string
-            nullable: true
-            example: 1
-          i_type:
-            type: string
-            enum:
-              - comic
-              - officialart
-              - stamp
-              - interface
-              - background
-            description: Image File Situation. Maybe others...
-            nullable: true
-            example: comic
-          image:
-            type: string
-            format: uri
-            nullable: true
-            example: "https://i.bandori.party/u/asset/1Kasumi-nese-Level-3-FQlDfv.png"
-          english_image:
-            type: string
-            format: uri
-            nullable: true
-            example: "https://i.bandori.party/u/asset/e/1Kasumese-Level-3-ANjpT0.png"
-          taiwanese_image:
-            type: string
-            format: uri
-            nullable: true
-            example: "https://i.bandori.party/u/asset/t/1Kasumi-nese-Level-3-TgcEZ8.png"
-          korean_image:
-            type: string
-            format: uri
-            nullable: true
-            example: "https://i.bandori.party/u/asset/k/1Kasumi-nese-Level-3-VdKkt6.png"
-          name:
-            type: string
-            nullable: true
-            example: "Kasumese, Level 3"
-          i_band:
-            type: string
-            nullable: true
-            example: null
-          c_tags:
-            type: object
-            properties:
-              twitter: string
-              seasonal: string
-            nullable: true
-            example: null
-          event:
+type: object
+properties:
+  count:
+    type: integer
+    description: The number of all Assets count.
+    example: 2319
+  next:
+    type: string
+    format: uri
+    nullable: true
+    description: Next URL for pagination.
+    example: https://bandori.party/api/assets/?page=3
+  previous:
+    type: string
+    format: uri
+    nullable: true
+    description: Previous URL for pagination.
+    example: https://bandori.party/api/assets/?page=1
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+          example: 1
+        i_type:
+          type: string
+          enum:
+            - comic
+            - officialart
+            - stamp
+            - interface
+            - background
+          description: Image File Situation. Maybe others...
+          nullable: true
+          example: comic
+        image:
+          type: string
+          format: uri
+          nullable: true
+          example: "https://i.bandori.party/u/asset/1Kasumi-nese-Level-3-FQlDfv.png"
+        english_image:
+          type: string
+          format: uri
+          nullable: true
+          example: "https://i.bandori.party/u/asset/e/1Kasumese-Level-3-ANjpT0.png"
+        taiwanese_image:
+          type: string
+          format: uri
+          nullable: true
+          example: "https://i.bandori.party/u/asset/t/1Kasumi-nese-Level-3-TgcEZ8.png"
+        korean_image:
+          type: string
+          format: uri
+          nullable: true
+          example: "https://i.bandori.party/u/asset/k/1Kasumi-nese-Level-3-VdKkt6.png"
+        name:
+          type: string
+          nullable: true
+          example: "Kasumese, Level 3"
+        i_band:
+          type: string
+          nullable: true
+          example: null
+        c_tags:
+          type: object
+          properties:
+            twitter: string
+            seasonal: string
+          nullable: true
+          example: null
+        event:
+          type: integer
+          nullable: true
+          example: null
+        value:
+          type: integer
+          nullable: true
+          example: 1
+        source:
+          type: string
+          nullable: true
+          example: null
+        source_link:
+          type: string
+          format: uri
+          nullable: true
+          example: null
+        song:
+          type: string
+          nullable: true
+          example: null
+        members:
+          type: array
+          items:
             type: integer
-            nullable: true
-            example: null
-          value:
-            type: integer
-            nullable: true
-            example: 1
-          source:
-            type: string
-            nullable: true
-            example: null
-          source_link:
-            type: string
-            format: uri
-            nullable: true
-            example: null
-          song:
-            type: string
-            nullable: true
-            example: null
-          members:
-            type: array
-            items:
-              type: integer
-            nullable: true
-            example:
-              - 6
-              - 10
+          nullable: true
+          example:
+            - 6
+            - 10

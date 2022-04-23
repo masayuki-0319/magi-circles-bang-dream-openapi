@@ -1,44 +1,43 @@
-schema:
-  type: object
-  properties:
-    count:
-      type: integer
-      description: The number of all items count.
-    next:
-      type: string
-      format: uri
-      nullable: true
-      description: Next URL for pagination.
-      example: https://bandori.party/api/items/?page=3
-    previous:
-      type: string
-      format: uri
-      nullable: true
-      description: Previous URL for pagination.
-      example: https://bandori.party/api/items/?page=1
-    results:
-      type: array
-      items:
-        type: object
-        properties:
-          id:
-            type: string
-            nullable: false
-            example: 1
-          name:
-            type: string
-            nullable: true
-            example: "Stars"
-          image:
-            type: string
-            format: uri
-            nullable: true
-            example: "https://i.bandori.party/u/items/1Star-Aq09eH.png"
-          i_type:
-            type: string
-            nullable: true
-            example: other
-          m_description:
-            type: string
-            nullable: true
-            example: null
+type: object
+properties:
+  count:
+    type: integer
+    description: The number of all items count.
+  next:
+    type: string
+    format: uri
+    nullable: true
+    description: Next URL for pagination.
+    example: https://bandori.party/api/items/?page=3
+  previous:
+    type: string
+    format: uri
+    nullable: true
+    description: Previous URL for pagination.
+    example: https://bandori.party/api/items/?page=1
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: false
+          example: 1
+        name:
+          type: string
+          nullable: true
+          example: "Stars"
+        image:
+          type: string
+          format: uri
+          nullable: true
+          example: "https://i.bandori.party/u/items/1Star-Aq09eH.png"
+        i_type:
+          type: string
+          nullable: true
+          example: other
+        m_description:
+          type: string
+          nullable: true
+          example: null

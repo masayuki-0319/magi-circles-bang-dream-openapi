@@ -1,67 +1,66 @@
-schema:
-  type: object
-  properties:
-    id:
-      type: string
-      nullable: false
-      example: 1
-    image:
-      type: string
-      format: uri
-      nullable: false
-      example: "https://i.bandori.party/u/areas/items/1Studio-Mic-0P2Ru4.png"
-    name:
-      type: string
-      nullable: false
-      example: "スタジオ Mic\n"
-    area:
-      type: string
-      nullable: false
-      example: 5
-    i_type:
-      type: string
-      nullable: false
-      example: "studio"
-    i_instrument:
-      type: string
-      nullable: false
-      example: "mic"
-    i_band:
-      type: string
-      nullable: false
-      example: Poppin'Party
-    i_attribute:
-      type: string
-      nullable: false
-      example: null
-    i_boost_stat:
-      type: string
-      nullable: true
-      example: null
-    max_level:
-      type: integer
-      nullable: false
-      example: 6
-    is_percent:
-      type: boolean
-      nullable: false
-      example: true
-    life_list:
-      type: string
-      nullable: true
-      example: null
-    about:
-      type: string
-      nullable: false
-      example: "A typical studio microphone. Poppin Party's Kasumi uses it often for practice."
-    value_list:
-      type: integer
-      format: double
-      nullable: false
-      example:
-        - 2
-        - 2.5
-        - 3
-        - 3.5
-        - 4
-        - 4.5
+type: object
+properties:
+  id:
+    type: string
+    nullable: false
+    example: 1
+  image:
+    type: string
+    format: uri
+    nullable: false
+    example: "https://i.bandori.party/u/areas/items/1Studio-Mic-0P2Ru4.png"
+  name:
+    type: string
+    nullable: false
+    example: "スタジオ Mic\n"
+  area:
+    type: string
+    nullable: false
+    example: 5
+  i_type:
+    type: string
+    nullable: false
+    example: "studio"
+  i_instrument:
+    type: string
+    nullable: false
+    example: "mic"
+  i_band:
+    type: string
+    nullable: false
+    example: Poppin'Party
+  i_attribute:
+    type: string
+    nullable: false
+    example: null
+  i_boost_stat:
+    type: string
+    nullable: true
+    example: null
+  max_level:
+    type: integer
+    nullable: false
+    example: 6
+  is_percent:
+    type: boolean
+    nullable: false
+    example: true
+  life_list:
+    type: string
+    nullable: true
+    example: null
+  about:
+    type: string
+    nullable: false
+    example: "A typical studio microphone. Poppin Party's Kasumi uses it often for practice."
+  value_list:
+    type: integer
+    format: double
+    nullable: false
+    example:
+      - 2
+      - 2.5
+      - 3
+      - 3.5
+      - 4
+      - 4.5
