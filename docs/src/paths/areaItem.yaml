@@ -1,0 +1,21 @@
+get:
+  summary: Get Area Item
+  description: Get Area Item
+  deprecated: false
+  tags:
+    - areaItems
+  parameters:
+    - name: areaItemId
+      in: path
+      description: Area Item ID
+      required: true
+      schema: { type: string }
+      example: 1
+  responses:
+    200:
+      description: Success
+      headers:
+        $ref: '#/components/headers'
+      content:
+        application/json:
+          $ref: '#/components/schemas/AreaItem'

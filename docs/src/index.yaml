@@ -38,6 +38,8 @@ tags:
   description: Event
 - name: costumes
   description: Costumes
+- name: areaItems
+  description: Area Items
 
 paths:
   $ref: "./paths.yaml"

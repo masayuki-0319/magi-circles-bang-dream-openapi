@@ -1,0 +1,22 @@
+get:
+  summary: Get Area Items
+  description: Get Area Items
+  deprecated: false
+  tags:
+    - areaItems
+  parameters:
+    - name: offset
+      in: query
+      schema:
+        type: integer
+      description: The numbers of pagination
+      required: false
+      example: 1
+  responses:
+    200:
+      description: Success
+      headers:
+        $ref: '#/components/headers'
+      content:
+        application/json:
+          $ref: '#/components/schemas/AreaItems'

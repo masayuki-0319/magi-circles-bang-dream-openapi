@@ -16,3 +16,7 @@
   $ref: ./paths/costumes.yaml
 "/costumes/{costumeId}/":
   $ref: ./paths/costume.yaml
+"/areaitems/":
+  $ref: ./paths/areaItems.yaml
+"/areaitems/{areaItemId}/":
+  $ref: ./paths/areaItem.yaml

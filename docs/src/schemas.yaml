@@ -12,3 +12,7 @@ Costumes:
   $ref: ./schemas/Costumes.yaml
 Costume:
   $ref: ./schemas/Costume.yaml
+AreaItems:
+  $ref: ./schemas/AreaItems.yaml
+AreaItem:
+  $ref: ./schemas/AreaItem.yaml
