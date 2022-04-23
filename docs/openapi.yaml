@@ -1214,9 +1214,6 @@ components:
                 example: null
               c_tags:
                 type: object
-                properties:
-                  twitter: string
-                  seasonal: string
                 nullable: true
                 example: null
               event:
@@ -1263,7 +1260,6 @@ components:
             - stamp
             - interface
             - background
-          description: Image File Situation. Maybe others...
           nullable: true
           example: comic
         image:
@@ -1296,9 +1292,6 @@ components:
           example: null
         c_tags:
           type: object
-          properties:
-            twitter: string
-            seasonal: string
           nullable: true
           example: null
         event:
