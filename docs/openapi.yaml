@@ -167,7 +167,7 @@ paths:
                   - 1983
                   - 1982
                   - 1981
-  /cards/{cardsId}/:
+  /cards/{cardId}/:
     get:
       summary: Get specified card
       description: Get specified card
