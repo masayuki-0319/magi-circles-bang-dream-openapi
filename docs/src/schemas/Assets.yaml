@@ -22,8 +22,8 @@ properties:
       type: object
       properties:
         id:
-          type: string
-          nullable: true
+          type: integer
+          nullable: false
           example: 1
         i_type:
           type: string

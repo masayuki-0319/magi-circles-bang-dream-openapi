@@ -16,7 +16,7 @@ get:
     200:
       description: Success
       headers:
-        $ref: '#/components/headers'
+        $ref: '#/components/schemas/Headers'
       content:
         application/json:
           $ref: '#/components/schemas/Assets'

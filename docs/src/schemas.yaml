@@ -17,10 +17,10 @@ AreaItems:
 AreaItem:
   $ref: ./schemas/AreaItem.yaml
 Assets:
-  $ref: ./schemas/assets.yaml
+  $ref: ./schemas/Assets.yaml
 Asset:
-  $ref: ./schemas/asset.yaml
+  $ref: ./schemas/Asset.yaml
 Items:
-  $ref: ./schemas/items.yaml
+  $ref: ./schemas/Items.yaml
 Item:
-  $ref: ./schemas/item.yaml
+  $ref: ./schemas/Item.yaml

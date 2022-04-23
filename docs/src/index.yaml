@@ -49,27 +49,27 @@ paths:
   $ref: "./paths.yaml"
 
 components:
-  headers:
-    cache-control:
-      schema:
-        type: string
-        example: private
-    content-language:
-      schema:
-        type: string
-        enum: ["en", "ja"]
-        example: en
-    content-type:
-      schema:
-        type: string
-        example: application/json; charset=utf-8
-    cf-cache-status:
-      schema:
-        type: string
-        example: DYNAMIC
-    vary:
-      schema:
-        type: string
-        example: Accept-Language, Cookie
   schemas:
     $ref: "./schemas.yaml"
+    Headers:
+      cache-control:
+        schema:
+          type: string
+          example: private
+      content-language:
+        schema:
+          type: string
+          enum: ["en", "ja"]
+          example: en
+      content-type:
+        schema:
+          type: string
+          example: application/json; charset=utf-8
+      cf-cache-status:
+        schema:
+          type: string
+          example: DYNAMIC
+      vary:
+        schema:
+          type: string
+          example: Accept-Language, Cookie

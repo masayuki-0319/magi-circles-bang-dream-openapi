@@ -56,7 +56,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Endpoints'
@@ -71,7 +71,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -133,7 +133,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Member'
@@ -148,7 +148,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -180,7 +180,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Card'
@@ -203,7 +203,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Events'
@@ -226,7 +226,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Event'
@@ -249,7 +249,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Costumes'
@@ -272,7 +272,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Costume'
@@ -295,7 +295,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/AreaItems'
@@ -318,7 +318,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/AreaItem'
@@ -341,7 +341,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Assets'
@@ -364,7 +364,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Asset'
@@ -387,7 +387,7 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Items'
@@ -410,35 +410,11 @@ paths:
         '200':
           description: Success
           headers:
-            $ref: '#/components/headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               $ref: '#/components/schemas/Item'
 components:
-  headers:
-    cache-control:
-      schema:
-        type: string
-        example: private
-    content-language:
-      schema:
-        type: string
-        enum:
-          - en
-          - ja
-        example: en
-    content-type:
-      schema:
-        type: string
-        example: application/json; charset=utf-8
-    cf-cache-status:
-      schema:
-        type: string
-        example: DYNAMIC
-    vary:
-      schema:
-        type: string
-        example: Accept-Language, Cookie
   schemas:
     Endpoints:
       type: object
@@ -1163,8 +1139,8 @@ components:
             type: object
             properties:
               id:
-                type: string
-                nullable: true
+                type: integer
+                nullable: false
                 example: 1
               i_type:
                 type: string
@@ -1248,8 +1224,8 @@ components:
       type: object
       properties:
         id:
-          type: string
-          nullable: true
+          type: integer
+          nullable: false
           example: 1
         i_type:
           type: string
@@ -1394,3 +1370,27 @@ components:
           type: string
           nullable: true
           example: null
+    Headers:
+      cache-control:
+        schema:
+          type: string
+          example: private
+      content-language:
+        schema:
+          type: string
+          enum:
+            - en
+            - ja
+          example: en
+      content-type:
+        schema:
+          type: string
+          example: application/json; charset=utf-8
+      cf-cache-status:
+        schema:
+          type: string
+          example: DYNAMIC
+      vary:
+        schema:
+          type: string
+          example: Accept-Language, Cookie
