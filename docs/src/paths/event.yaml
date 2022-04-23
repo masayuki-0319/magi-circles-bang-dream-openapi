@@ -14,8 +14,6 @@ get:
   responses:
     200:
       description: Success
-      headers:
-        $ref: '#/components/schemas/Headers'
       content:
         application/json:
           schema:
