@@ -42,6 +42,8 @@ tags:
   description: Area Items
 - name: assets
   description: Assets ( Maybe images )
+- name: items
+  description: Items
 
 paths:
   $ref: "./paths.yaml"

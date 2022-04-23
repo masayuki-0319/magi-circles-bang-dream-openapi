@@ -24,3 +24,7 @@
   $ref: ./paths/assets.yaml
 "/assets/{assetId}/":
   $ref: ./paths/asset.yaml
+"/items/":
+  $ref: ./paths/items.yaml
+"/items/{itemId}/":
+  $ref: ./paths/item.yaml

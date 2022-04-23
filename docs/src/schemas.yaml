@@ -20,3 +20,7 @@ Assets:
   $ref: ./schemas/assets.yaml
 Asset:
   $ref: ./schemas/asset.yaml
+Items:
+  $ref: ./schemas/items.yaml
+Item:
+  $ref: ./schemas/item.yaml

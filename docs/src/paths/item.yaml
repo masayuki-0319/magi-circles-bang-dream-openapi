@@ -1,0 +1,21 @@
+get:
+  summary: Get Item
+  description: Get Item
+  deprecated: false
+  tags:
+    - items
+  parameters:
+    - name: itemId
+      in: path
+      description: Item ID
+      required: true
+      schema: { type: string }
+      example: 1
+  responses:
+    200:
+      description: Success
+      headers:
+        $ref: '#/components/headers'
+      content:
+        application/json:
+          $ref: '#/components/schemas/Item'

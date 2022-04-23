@@ -1,0 +1,22 @@
+get:
+  summary: Get Items
+  description: Get Items
+  deprecated: false
+  tags:
+    - items
+  parameters:
+    - name: offset
+      in: query
+      schema:
+        type: integer
+      description: The numbers of pagination
+      required: false
+      example: 1
+  responses:
+    200:
+      description: Success
+      headers:
+        $ref: '#/components/headers'
+      content:
+        application/json:
+          $ref: '#/components/schemas/Items'
