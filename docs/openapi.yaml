@@ -56,8 +56,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -73,8 +72,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -136,8 +134,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -153,8 +150,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -186,8 +182,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -211,8 +206,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -236,8 +230,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -261,8 +254,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -286,8 +278,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -311,8 +302,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -336,8 +326,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -361,8 +350,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -386,8 +374,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -411,8 +398,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
@@ -436,8 +422,7 @@ paths:
         '200':
           description: Success
           headers:
-            schema:
-              $ref: '#/components/schemas/Headers'
+            $ref: '#/components/schemas/Headers'
           content:
             application/json:
               schema:
