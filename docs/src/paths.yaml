@@ -6,7 +6,7 @@
   $ref: ./paths/member.yaml
 "/cardids/":
   $ref: ./paths/cardids.yaml
-"/cards/{cardId}/":
+"/cards/{cardsId}/":
   $ref: ./paths/card.yaml
 "/events/":
   $ref: ./paths/events.yaml
