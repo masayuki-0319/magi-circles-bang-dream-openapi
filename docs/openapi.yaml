@@ -1346,27 +1346,3 @@ components:
           type: string
           nullable: true
           example: null
-    Headers:
-      cache-control:
-        schema:
-          type: string
-          example: private
-      content-language:
-        schema:
-          type: string
-          enum:
-            - en
-            - ja
-          example: en
-      content-type:
-        schema:
-          type: string
-          example: application/json; charset=utf-8
-      cf-cache-status:
-        schema:
-          type: string
-          example: DYNAMIC
-      vary:
-        schema:
-          type: string
-          example: Accept-Language, Cookie
